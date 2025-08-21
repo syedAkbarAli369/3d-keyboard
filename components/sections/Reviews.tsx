@@ -43,7 +43,7 @@ const reviews = [
   {
     name: "Charlie B.",
     imgSrc: "/assets/reviews/rev7.jpg",
-    text: "I was impressed with the application's functionality and the seamless integration with other tools I use.",
+    text: "I was impressed with the applications functionality and the seamless integration with other tools I use.",
     stars: 4.8
   },
   {

@@ -164,7 +164,7 @@ const Cart = () => {
             </div>
           </div>
         ) : (
-          <p className='text-slate-400 text-center mt-33'>There's Currently Nothing is Here.</p>
+          <p className='text-slate-400 text-center mt-33'>There is Currently Nothing is Here.</p>
         )}
       </div>
     </div>
