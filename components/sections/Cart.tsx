@@ -4,6 +4,7 @@ import React, { createContext, useContext, useEffect, useState } from 'react'
 import toast from 'react-hot-toast';
 import { FaMinus, FaPlus, FaTrash } from 'react-icons/fa6';
 import { X } from 'lucide-react'
+import Image from 'next/image';
 
 interface CartProduct {
   imgSrc: string,
@@ -48,7 +49,13 @@ const CartProduct = ({ imgSrc, title, price, quantity, onAdd, onRemove, onDelete
   return (
     <div className='h-33 flex flex-row justify-between pr-3 md:pr-9 bg-stone-950 rounded-2xl'>
       <div className='flex flex-row gap-3 md:gap-9'>
-        <img src={imgSrc} alt="product" width={120} height={120} className='rounded-xl' />
+        {/* <img src={imgSrc} alt="product" width={120} height={120} className='rounded-xl' /> */}
+        <Image src={imgSrc}
+          alt='product'
+          width={120}
+          height={120}
+          className='rounded-xl'
+        />
 
         <div className='flex flex-col justify-between px-3 py-6 text-slate-200'>
           <h3 className='text-lg font-semibold'>{title}</h3>

@@ -1,7 +1,6 @@
 
 
 import Cart from '@/components/sections/Cart'
-import Catalog, { ProductType } from '@/components/sections/Catalog'
 import Features from '@/components/sections/Features'
 import Footer from '@/components/sections/Footer'
 import Hero from '@/components/sections/Hero'
