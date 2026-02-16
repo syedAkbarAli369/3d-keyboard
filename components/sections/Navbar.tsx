@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import Logo from '../Logo'
 import Link from 'next/link'
 import { FaCartShopping } from 'react-icons/fa6'
@@ -42,8 +42,8 @@ const Navbar = () => {
   const navItem = 'relative text-white text-sm md:text-base tracking-widest pb-1 after:absolute after:left-0 after:-bottom-0.5 after:h-[2px] after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full'
 
   return (
-    <nav className={`relative w-full pt-6 pb-6 ${militech.className} bg-[linear-gradient(145deg,#1a1a1a_25%,#0a0a0a_25%,#0a0a0a_50%,#1a1a1a_50%,#1a1a1a_75%,#0a0a0a_75%)] bg-[length:10px_10px] max-w-[1440px] mx-auto`}>
-      <div className='max-w-[1536px] mx-auto px-4 md:px-8 lg:px-16 h-[70px] flex items-center justify-between'>
+    <nav className={`relative w-full pt-6 pb-6 ${militech.className} bg-[linear-gradient(145deg,#1a1a1a_25%,#0a0a0a_25%,#0a0a0a_50%,#1a1a1a_50%,#1a1a1a_75%,#0a0a0a_75%)] bg-[length:10px_10px] max-w-full mx-auto`}>
+      <div className='max-w-full mx-auto px-4 md:px-8 lg:px-16 h-[70px] flex items-center justify-between'>
         {/* Logo */}
         <Logo size='lg' />
 
