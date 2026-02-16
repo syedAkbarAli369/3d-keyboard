@@ -19,7 +19,6 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// const users = [];
 
 app.post('/signup', async (req, res) => {
   try {

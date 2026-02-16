@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import React, { useEffect } from 'react'
+import React from 'react'
 import hero from '@/public/assets/hero.png'
 import Buttons from '../Buttons'
 import localFont from 'next/font/local'
@@ -12,25 +12,6 @@ const lemonMilk = localFont({
 })
 
 const Hero = () => {
-
-  // useEffect(() => {
-  //   function handleScroll() {
-  //     const heroElement = document.getElementById('hero');
-  //     if (heroElement) {
-  //       const rect = heroElement.getBoundingClientRect();
-  //       const isInView = rect.top >= 84 && rect.bottom >= window.innerHeight;
-  //       document.body.style.overflow = isInView ? 'hidden' : 'auto'
-  //     }
-  //   }
-
-  //   window.addEventListener('scroll', handleScroll)
-  //   handleScroll();
-
-  //   return () => {
-  //     window.removeEventListener('scroll', handleScroll);
-  //     document.body.style.overflow = 'auto'
-  //   }
-  // }, [])
 
   return (
     <div id='hero' className={`relative overflow-hidden h-screen max-w-[90%] pl-0 mx-auto flex justify-center flex-col p-2 pt-3 pb-45 md:pt-0 md:pb-33 ${lemonMilk.className}`}>

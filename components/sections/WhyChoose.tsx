@@ -31,14 +31,14 @@ const WhyChoose = () => {
 
           <p className="text-slate-400 max-w-xl leading-relaxed">
             Our mechanical keyboard is engineered to deliver speed, precision, and
-            comfort. Whether you're gaming for hours or working all day, every
+            comfort. Whether you are gaming for hours or working all day, every
             keystroke feels smooth, responsive, and reliable.
           </p>
 
           <ul className="flex flex-col gap-3 text-slate-300">
-            <li>— Ultra-low latency mechanical switches</li>
+            <li>— Ultra low latency mechanical switches</li>
             <li>— Ergonomic layout for long sessions</li>
-            <li>— Premium materials & solid build</li>
+            <li>— Premium materials and solid build</li>
             <li>— Perfect for gaming and productivity</li>
           </ul>
         </div>
