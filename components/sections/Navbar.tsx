@@ -1,6 +1,5 @@
 'use client'
 
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react'
 import Logo from '../Logo'
 import Link from 'next/link'
@@ -40,14 +39,10 @@ const Navbar = () => {
     router.push('/')
   }
 
-  const navItem =
-    'relative text-white text-sm md:text-base tracking-widest pb-1 after:absolute after:left-0 after:-bottom-0.5 after:h-[2px] after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full'
+  const navItem = 'relative text-white text-sm md:text-base tracking-widest pb-1 after:absolute after:left-0 after:-bottom-0.5 after:h-[2px] after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full'
 
   return (
-    <nav
-      className={`relative w-full pt-6 pb-6 ${militech.className} bg-[linear-gradient(145deg,#1a1a1a_25%,#0a0a0a_25%,#0a0a0a_50%,#1a1a1a_50%,#1a1a1a_75%,#0a0a0a_75%)] bg-[length:10px_10px] max-w-[1440px] mx-auto`}
-    >
-
+    <nav className={`relative w-full pt-6 pb-6 ${militech.className} bg-[linear-gradient(145deg,#1a1a1a_25%,#0a0a0a_25%,#0a0a0a_50%,#1a1a1a_50%,#1a1a1a_75%,#0a0a0a_75%)] bg-[length:10px_10px] max-w-[1440px] mx-auto`}>
       <div className='max-w-[1536px] mx-auto px-4 md:px-8 lg:px-16 h-[70px] flex items-center justify-between'>
         {/* Logo */}
         <Logo size='lg' />
@@ -150,32 +145,3 @@ const Navbar = () => {
 }
 
 export default Navbar
-=======
-import React from 'react'
-import Logo from '../Logo'
-import Link from 'next/link'
-import { FaCartShopping } from 'react-icons/fa6'
-import { useCart } from './Cart'
-
-const Navbar = () => {
-
-  const { toggleCart } = useCart();
-
-  return (
-    <div className='max-w-6xl flex justify-between items-center mx-auto p-6'>
-      <Logo size='lg' />
-      <div className='flex flex-row gap-9 items-center text-white'>
-        <Link href="#catalog" className='hidden md:block font-semibold text-sm text-slate-400'>Catalog</Link>
-        <Link href="#features" className='hidden md:block font-semibold text-sm text-slate-400'>Features</Link>
-        <Link href="#reviews" className='hidden md:block font-semibold text-sm text-slate-400'>Reviews</Link>
-      </div>
-      <FaCartShopping
-        onClick={toggleCart}
-        className='w-9 h-9 text-slate-400 cursor-pointer'
-      />
-    </div>
-  )
-}
-
-export default Navbar
->>>>>>> 5c5320c4a0ee19a02616cb336703832f932900a3

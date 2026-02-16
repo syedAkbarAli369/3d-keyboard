@@ -1,11 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-<<<<<<< HEAD
 import React, { useRef, Suspense } from 'react'
-=======
-import React, { useRef } from 'react'
->>>>>>> 5c5320c4a0ee19a02616cb336703832f932900a3
 import Buttons from '../Buttons'
 import { useInView } from 'framer-motion'
 import { Canvas, useLoader } from '@react-three/fiber'
@@ -13,10 +9,6 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
 import * as THREE from 'three'
 import { a, easings, useSpring } from '@react-spring/three'
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 5c5320c4a0ee19a02616cb336703832f932900a3
 interface ModelProps {
   url: string,
   initialPosition: [number, number, number];
@@ -25,10 +17,6 @@ interface ModelProps {
 }
 
 const Model = ({ url, initialPosition, finalPosition, rotation }: ModelProps) => {
-<<<<<<< HEAD
-=======
-
->>>>>>> 5c5320c4a0ee19a02616cb336703832f932900a3
   const model = useLoader(GLTFLoader, url)
   const modelRef = useRef<THREE.Mesh>(null);
 
@@ -45,11 +33,8 @@ const Model = ({ url, initialPosition, finalPosition, rotation }: ModelProps) =>
       position={position}
       rotation={rotation}
       scale={[0.65, 0.65, 0.65]}
-<<<<<<< HEAD
-      castShadow={false} // disable shadow for perf
+      castShadow={false}
       receiveShadow={false}
-=======
->>>>>>> 5c5320c4a0ee19a02616cb336703832f932900a3
     >
       <primitive object={model.scene} />
     </a.mesh>
@@ -57,10 +42,6 @@ const Model = ({ url, initialPosition, finalPosition, rotation }: ModelProps) =>
 }
 
 const Sale = () => {
-<<<<<<< HEAD
-=======
-
->>>>>>> 5c5320c4a0ee19a02616cb336703832f932900a3
   const mountRef = useRef(null)
   const isInView = useInView(mountRef, { once: true });
 
@@ -77,31 +58,17 @@ const Sale = () => {
   ]
 
   return (
-<<<<<<< HEAD
-    <div className='max-w-[1536px] flex flex-col items-center gap-9 pt-33 mx-auto overflow-x-hidden '>
+    <div className='max-w-[1536px] flex flex-col items-center gap-9 pt-33 mx-auto overflow-x-hidden'>
       <div ref={mountRef} className='absolute w-full h-[500px] md:h-[700px]'>
         <Canvas
           camera={{ position: [0, 0, 5], fov: 75 }}
           className='w-full h-full'
         >
-          {/* LIGHTING: simplified for performance */}
           <ambientLight intensity={0.5} />
           <directionalLight position={[5, 5, 5]} intensity={1.5} />
 
           {isInView && (
             <Suspense fallback={null}>
-=======
-    <div className='max-w-[1536px] flex flex-col items-center gap-9 pt-33 mx-auto overflow-x-hidden'>
-      <div ref={mountRef} className='absolute w-full h-[500px] md:h-[700px]'>
-        <Canvas camera={{ position: [0, 0, 5], fov: 75 }}
-          className='w-full h-full'
-        >
-          <ambientLight intensity={0.5} />
-          <directionalLight position={[5, 5, 5]} intensity={3} />
-          <directionalLight position={[-5, 5, 5]} intensity={3} />
-          {isInView && (
-            <>
->>>>>>> 5c5320c4a0ee19a02616cb336703832f932900a3
               <Model
                 url='/assets/keyboard2.glb'
                 initialPosition={leftModelInitialPosition}
@@ -114,7 +81,6 @@ const Sale = () => {
                 finalPosition={rightModelFinalPosition}
                 rotation={modelRotation}
               />
-<<<<<<< HEAD
             </Suspense>
           )}
         </Canvas>
@@ -127,30 +93,9 @@ const Sale = () => {
       </p>
       <Link href="catalog" className='w-36 flex flex-col items-center py-3 rounded-xl text-xs'>
         <Buttons text='Buy Keyboard' className='border-2 border-white' />
-=======
-            </>
-          )}
-        </Canvas>
-      </div>
-      <h2 className='text-4xl md:text-5xl font-bold text-center'>
-        Limited Collection <br /> For Sale
-      </h2>
-      <p className='uppercase text-lg font-bold bg-gradient-to-t from-indigo-900 to-indigo-600 bg-clip-text text-transparent'>Discounts Upto 36%</p>
-      <Link href="catalog"
-        className='w-36 flex flex-col items-center py-3 rounded-xl text-xs'
-      >
-        <Buttons
-          text='Buy Keyboard'
-          className='bg-gradient-to-t from-indigo-900 to-indigo-600'
-        />
->>>>>>> 5c5320c4a0ee19a02616cb336703832f932900a3
       </Link>
     </div>
   )
 }
 
-<<<<<<< HEAD
 export default Sale
-=======
-export default Sale
->>>>>>> 5c5320c4a0ee19a02616cb336703832f932900a3

@@ -47,13 +47,8 @@ interface CartProductProps {
 
 const CartProduct = ({ imgSrc, title, price, quantity, onAdd, onRemove, onDelete }: CartProductProps) => {
   return (
-<<<<<<< HEAD
     <div className='h-33 flex flex-row justify-between pr-3 md:pr-9 bg-black rounded-2xl'>
-=======
-    <div className='h-33 flex flex-row justify-between pr-3 md:pr-9 bg-stone-950 rounded-2xl'>
->>>>>>> 5c5320c4a0ee19a02616cb336703832f932900a3
       <div className='flex flex-row gap-3 md:gap-9'>
-        {/* <img src={imgSrc} alt="product" width={120} height={120} className='rounded-xl' /> */}
         <Image src={imgSrc}
           alt='product'
           width={120}
@@ -82,8 +77,6 @@ const CartProduct = ({ imgSrc, title, price, quantity, onAdd, onRemove, onDelete
 
         <FaTrash className='w-3 h-3 cursor-pointer' onClick={onDelete} />
       </div>
-
-
     </div>
   )
 }
@@ -95,11 +88,9 @@ const Cart = () => {
   const [total, setTotal] = useState<number>(0);
 
   useEffect(() => {
-    // update total whenever the cart items change
     const newTotal = cartItems.reduce((sum, product) => sum + product.price * product.quantity, 0);
     setTotal(newTotal)
 
-    // save cart data to local storage when everr it change
     if (cartItems.length > 0) {
       localStorage.setItem('cart', JSON.stringify(cartItems))
     }
@@ -129,21 +120,13 @@ const Cart = () => {
   if (!isOpen) return null
 
   return (
-<<<<<<< HEAD
     <div className='fixed h-screen w-screen top-0 left-0 flex items-center justify-center z-50 bg-black'>
       <div className='w-full max-w-4xl h-full md:h-[600px] bg-[linear-gradient(145deg,#1a1a1a_25%,#0a0a0a_25%,#0a0a0a_50%,#1a1a1a_50%,#1a1a1a_75%,#0a0a0a_75%)] bg-[length:10px_10px] rounded-3xl overflow-hidden'>
-=======
-    <div className='fixed h-screen w-screen top-0 left-0 flex items-center justify-center z-50 bg-stone-950/75'>
-      <div className='w-full max-w-4xl h-full md:h-[600px] bg-stone-800 rounded-3xl overflow-hidden'>
->>>>>>> 5c5320c4a0ee19a02616cb336703832f932900a3
         <div className='w-full flex items-center justify-between p-9'>
           <h2 className='text-2xl font-semibold'>Your Cart</h2>
           <X className='w-6 h-6 cursor-pointer'
             onClick={toggleCart}
           />
-          {/* <FaCross className='w-6 h-6 cursor-pointer'
-            onClick={toggleCart}
-          /> */}
         </div>
         {cartItems.length > 0 ? (
           <div className='w-full h-max flex flex-col md:flex-row p-3 md:p-12 gap-9'>
@@ -158,7 +141,6 @@ const Cart = () => {
                   onAdd={() => handleAddProduct(index)}
                   onDelete={() => handleDeleteProduct(index)}
                   onRemove={() => handleRemoveProduct(index)}
-
                 />
               ))}
             </div>
@@ -186,7 +168,6 @@ const CartProvider = ({ children }: { children: React.ReactNode }) => {
   const [cartItems, setCartItems] = useState<CartProduct[]>([]);
 
   useEffect(() => {
-    // load cart data from local storage on component mount
     const storedCart = localStorage.getItem('cart')
     if (storedCart) {
       setCartItems(JSON.parse(storedCart))
@@ -209,14 +190,12 @@ const CartProvider = ({ children }: { children: React.ReactNode }) => {
     }
   }
 
-  // add product
   function handleAddProduct(index: number) {
     const updatedCart = cartItems.map((item, i) => i === index ? { ...item, quantity: item.quantity + 1 } : item);
     setCartItems(updatedCart)
     localStorage.setItem('cart', JSON.stringify(updatedCart))
   }
 
-  // remove product
   function handleRemoveProduct(index: number) {
     const updatedCart = cartItems.map((item, i) => i === index && item.quantity > 1 ? { ...item, quantity: item.quantity - 1 } : item);
     setCartItems(updatedCart)
@@ -246,10 +225,9 @@ const CartProvider = ({ children }: { children: React.ReactNode }) => {
       }}
     >
       {children}
-
     </CartContext.Provider>
   )
 }
 
 export default Cart
-export { CartProvider } 
+export { CartProvider }

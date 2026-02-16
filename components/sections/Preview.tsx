@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 5c5320c4a0ee19a02616cb336703832f932900a3
 import React, { useEffect, useRef } from 'react'
 import * as THREE from 'three'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
@@ -175,8 +171,4 @@ const Preview = ({ selectedProduct }: PreviewProps) => {
   )
 }
 
-<<<<<<< HEAD
 export default Preview
-=======
-export default Preview
->>>>>>> 5c5320c4a0ee19a02616cb336703832f932900a3

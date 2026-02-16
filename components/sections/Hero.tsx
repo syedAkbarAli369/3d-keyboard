@@ -4,8 +4,6 @@ import Image from 'next/image'
 import React, { useEffect } from 'react'
 import hero from '@/public/assets/hero.png'
 import Buttons from '../Buttons'
-import Link from 'next/link'
-import { MdKeyboardDoubleArrowDown } from 'react-icons/md'
 import localFont from 'next/font/local'
 import styles from './Hero.module.css'
 
@@ -15,24 +13,24 @@ const lemonMilk = localFont({
 
 const Hero = () => {
 
-  useEffect(() => {
-    function handleScroll() {
-      const heroElement = document.getElementById('hero');
-      if (heroElement) {
-        const rect = heroElement.getBoundingClientRect();
-        const isInView = rect.top >= 84 && rect.bottom >= window.innerHeight;
-        document.body.style.overflow = isInView ? 'hidden' : 'auto'
-      }
-    }
+  // useEffect(() => {
+  //   function handleScroll() {
+  //     const heroElement = document.getElementById('hero');
+  //     if (heroElement) {
+  //       const rect = heroElement.getBoundingClientRect();
+  //       const isInView = rect.top >= 84 && rect.bottom >= window.innerHeight;
+  //       document.body.style.overflow = isInView ? 'hidden' : 'auto'
+  //     }
+  //   }
 
-    window.addEventListener('scroll', handleScroll)
-    handleScroll();
+  //   window.addEventListener('scroll', handleScroll)
+  //   handleScroll();
 
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-      document.body.style.overflow = 'auto'
-    }
-  }, [])
+  //   return () => {
+  //     window.removeEventListener('scroll', handleScroll);
+  //     document.body.style.overflow = 'auto'
+  //   }
+  // }, [])
 
   return (
     <div id='hero' className={`relative overflow-hidden h-screen max-w-[90%] pl-0 mx-auto flex justify-center flex-col p-2 pt-3 pb-45 md:pt-0 md:pb-33 ${lemonMilk.className}`}>
@@ -66,14 +64,14 @@ const Hero = () => {
           priority
         />
       </div>
-
+      {/* 
       <Link href="#catalog"
         className='absolute bottom-24 left-1/2 transform -translate-x-1/2 flex flex-row items-center px-6 py-2 mx-auto mb-15 mt-auto border border-slate-400 rounded-xl text-sm md:text-slate-400 text-white'
       >
         <MdKeyboardDoubleArrowDown className='w-6 h-6 mr-2 animate-ping' />
         <span>Click To Scroll</span>
         <MdKeyboardDoubleArrowDown className='w-6 h-6 ml-2 animate-ping' />
-      </Link>
+      </Link> */}
     </div>
   )
 }

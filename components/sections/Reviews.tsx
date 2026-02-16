@@ -1,17 +1,11 @@
-
-
 import Marquee from 'react-fast-marquee'
 import ReviewCard from '../ReviewCard';
-
-<<<<<<< HEAD
 import localFont from 'next/font/local'
 
 const lemonMilk = localFont({
   src: '../../fonts/LEMONMILK-Regular.otf',
 })
 
-=======
->>>>>>> 5c5320c4a0ee19a02616cb336703832f932900a3
 const reviews = [
   {
     name: "Bob S.",
@@ -65,13 +59,8 @@ const reviews = [
 
 const Reviews = () => {
   return (
-<<<<<<< HEAD
-    <div id='reviews' className={`container mx-auto my-18 pt-18 pb-18 md:pt-36 md:pb-36 lg:pt-63 lg:pb-63  px-4 md:px-8 lg:px-16 ${lemonMilk.className}`}>
+    <div id='reviews' className={`container mx-auto my-18 pt-18 pb-18 md:pt-36 md:pb-36 lg:pt-63 lg:pb-63 px-4 md:px-8 lg:px-16 ${lemonMilk.className}`}>
       <h2 className='text-2xl md:text-3xl font-semibold pl-4 md:pl-16 pb-16 text-center'>
-=======
-    <div id='reviews' className='container mx-auto my-18 pt-7'>
-      <h2 className='text-2xl font-semibold pl-4 md:pl-16 pb-16 text-center'>
->>>>>>> 5c5320c4a0ee19a02616cb336703832f932900a3
         <span className='animate-pulse'>/ </span>
         Reviews
       </h2>

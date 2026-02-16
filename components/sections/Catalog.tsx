@@ -1,18 +1,10 @@
 import ProductCard from "../ProductCard";
-// import keyboard1 from '@/assets/keyboard1.png'
-// import keyboard2 from '@/assets/keyboard2.png'
-// import keyboard3 from '@/assets/keyboard3.png'
-
-<<<<<<< HEAD
 import localFont from 'next/font/local'
 
 const lemonMilk = localFont({
   src: '../../fonts/LEMONMILK-Regular.otf',
 })
 
-
-=======
->>>>>>> 5c5320c4a0ee19a02616cb336703832f932900a3
 const products = [
   {
     id: '1',
@@ -53,15 +45,9 @@ interface CatalogProps {
 const Catalog = ({ selectedProduct, onProductClick }: CatalogProps) => {
   return (
     <div id='catalog'
-<<<<<<< HEAD
       className={`max-w-[1024px] mx-auto ${lemonMilk.className}`}
     >
       <h2 className="text-2xl md:text-3xl font-semibold pl-3 md:pl-15 pb-15 text-center">
-=======
-      className="max-w-[1024px] mx-auto"
-    >
-      <h2 className="text-2xl font-semibold pl-3 md:pl-15 pb-15 text-center">
->>>>>>> 5c5320c4a0ee19a02616cb336703832f932900a3
         <span className="animate-pulse">/ </span>
         Catalog
       </h2>
